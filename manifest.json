@@ -1,10 +1,10 @@
 {
-  "name": "Hello Extensions YOYOYYO",
-  "description": "Base Level Extension",
+  "name": "Read Page",
+  "description": "Read Page Extension",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
+    "default_popup": "dist/index.html",
+    "default_icon": "read-page-extension.png"
   }
 }
