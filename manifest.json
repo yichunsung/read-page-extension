@@ -11,7 +11,8 @@
   },
   "content_scripts": [
     {
-      "js": ["scripts/content.js"],
+      "type": "module",
+      "js": ["scripts/dom-to-image.min.js", "scripts/content.js"],
       "matches": [
         "https://*/*",
         "https://developer.chrome.com/docs/webstore/*"
