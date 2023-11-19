@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "type": "module",
-      "js": ["scripts/dom-to-image.min.js", "scripts/content.js"],
+      "js": ["scripts/html2canvas.min.js", "scripts/content.js"],
       "matches": [
         "https://*/*",
         "https://developer.chrome.com/docs/webstore/*"

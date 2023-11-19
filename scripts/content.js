@@ -19,21 +19,14 @@ const article = document.querySelector('article');
 
 console.log(document.body);
 
-const node = document.body;
-domtoimage.toBlob(document.body)
-    .then(function (blob) {
-        window.saveAs(blob, 'my-node.png');
-    });
-/*domtoimage.toPng(node)
-    .then(function (dataUrl) {
-        var img = new Image();
-        img.src = dataUrl;
-        // console.log(dataUrl);
-        document.body.appendChild(img);
-    })
-    .catch(function (error) {
-        console.error('oops, something went wrong!', error);
-    }); */
+html2canvas(document.body, {
+  useCORS: true,
+  allowTaint: true,
+}).then(function(canvas) {
+  const dataURL = canvas.toDataURL();
+  console.log(dataURL);
+  document.body.appendChild(canvas);
+});
 
 // `document.querySelector` may return null if the selector doesn't match anything.
 if (article) {
