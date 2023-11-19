@@ -11,10 +11,25 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+import domtoimage from 'dom-to-image';
+
+
 
 const article = document.querySelector('article');
 
 console.log(document.body);
+
+const node = document.body;
+domtoimage.toPng(node)
+    .then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        console.log(dataUrl);
+        // document.body.appendChild(img);
+    })
+    .catch(function (error) {
+        console.error('oops, something went wrong!', error);
+    });
 
 // `document.querySelector` may return null if the selector doesn't match anything.
 if (article) {

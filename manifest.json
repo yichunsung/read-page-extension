@@ -13,7 +13,8 @@
     {
       "js": ["scripts/content.js"],
       "matches": [
-        "https://*/*"
+        "https://*/*",
+        "https://developer.chrome.com/docs/webstore/*"
       ]
     }
   ]
